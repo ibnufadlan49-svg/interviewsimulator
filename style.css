@@ -121,7 +121,7 @@ h1 {
 @media (max-width: 560px) {
   .landing-page {
     padding: 18px;
-    align-items: end;
+    align-items: center;
   }
 
   .landing-card {
