@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <!-- Metadata dasar halaman interview -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Simulator - Interview</title>
+
+    <!-- Font Google Poppins dengan fallback sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style khusus halaman interview -->
+    <link rel="stylesheet" href="interview.css" />
+  </head>
+  <body>
+    <!-- Area utama visual novel interview -->
+    <main class="interview-page">
+      <!-- Panel progress interview -->
+      <header class="top-panel" aria-label="Progress interview">
+        <a
+          class="back-link"
+          href="index.html"
+          aria-label="Kembali ke landing page"
+          >Kembali</a
+        >
+        <div class="progress-wrap" aria-hidden="true">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span class="question-counter" id="questionCounter">1/10</span>
+      </header>
+
+      <!-- Panggung visual novel yang menampung karakter dan bubble chat -->
+      <section class="scene" aria-live="polite">
+        <!-- Bubble jawaban kandidat di sisi kiri -->
+        <article
+          class="chat-bubble candidate-bubble"
+          id="candidateBubble"
+          hidden
+        >
+          <span class="speaker">Kandidat</span>
+          <p id="candidateText"></p>
+        </article>
+
+        <!-- Bubble HRD di samping kepala karakter -->
+        <article class="chat-bubble hrd-bubble" id="hrdBubble">
+          <span class="speaker">HRD</span>
+          <p id="hrdText"></p>
+        </article>
+
+        <!-- Karakter HRD di sisi kanan -->
+        <img
+          class="hrd-character"
+          src="assets/hrd.png"
+          alt="Ilustrasi HRD profesional"
+        />
+      </section>
+
+      <!-- Kontrol jawaban dan tombol lanjut -->
+      <section class="choice-panel" aria-label="Pilihan jawaban">
+        <div class="answers-grid" id="answersGrid"></div>
+        <button class="next-button" id="nextButton" type="button" hidden>
+          Lanjut
+        </button>
+      </section>
+    </main>
+
+    <!-- Data pertanyaan dan logic interview -->
+    <script src="questions.js"></script>
+    <script src="interview.js"></script>
+  </body>
+</html>
