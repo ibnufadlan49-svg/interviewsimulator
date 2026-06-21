@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <!-- Metadata dasar halaman hasil -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview Simulator - Result</title>
+
+    <!-- Font Google Poppins dengan fallback sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style khusus halaman hasil -->
+    <link rel="stylesheet" href="result.css" />
+  </head>
+  <body>
+    <!-- Area utama laporan interview -->
+    <main class="result-page">
+      <!-- Kartu laporan akhir -->
+      <section class="report-card" aria-labelledby="reportTitle">
+        <p class="eyebrow">Interview Report</p>
+        <h1 id="reportTitle">Hasil Interview</h1>
+
+        <!-- Ringkasan angka utama -->
+        <div class="score-board">
+          <article class="metric">
+            <span class="metric-label">Score</span>
+            <strong id="scoreValue">0/100</strong>
+          </article>
+          <article class="metric">
+            <span class="metric-label">Persentase Diterima</span>
+            <strong id="acceptanceValue">0%</strong>
+          </article>
+        </div>
+
+        <!-- Judul dan alasan evaluasi HRD -->
+        <article class="verdict">
+          <h2 id="resultTitle">Evaluasi belum tersedia</h2>
+          <p id="hrdReason">
+            Selesaikan interview terlebih dahulu untuk melihat laporan lengkap
+            dari HRD.
+          </p>
+        </article>
+
+        <!-- Tombol ulang simulasi -->
+        <a class="primary-button" href="interview.html">Main Lagi</a>
+      </section>
+    </main>
+
+    <!-- Logic halaman hasil -->
+    <script src="result.js"></script>
+  </body>
+</html>
