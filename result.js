@@ -28,7 +28,7 @@ function getInterviewReport(score) {
     };
   }
 
-  if (score >= 20) {
+  if (score >= 30) {
     return {
       title: "RED FLAG CANDIDATE",
       acceptance: 32,
